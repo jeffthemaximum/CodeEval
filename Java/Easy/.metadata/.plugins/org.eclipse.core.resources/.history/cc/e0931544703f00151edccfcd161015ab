@@ -1,0 +1,24 @@
+package swap_case;
+
+public class swap_case {
+	public static void main (String[] args)
+	{
+		String newLine = "";
+		String line = "hELLO wORLD!";
+		for (int I = 0; I < line.length(); I++){
+			char c = line.charAt(I);
+			if (c == Character.toUpperCase(c)){
+				c = Character.toLowerCase(c);
+			}
+			else if (c == Character.toLowerCase(c)){
+				c = Character.toUpperCase(c);
+			}
+			else {
+				c = c;
+			}
+			
+		}
+		newLine += c;
+		System.out.println(line);
+	}
+}
