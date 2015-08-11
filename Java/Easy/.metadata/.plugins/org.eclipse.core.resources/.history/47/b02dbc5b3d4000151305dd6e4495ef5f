@@ -1,0 +1,19 @@
+import java.util.HashMap;
+
+public class the_major_element {
+	public static void main (String[] args)
+	{
+		String line = "92,19,19,76,19,21,19,85,19,19,19,94,19,19,22,67,83,19,19,54,59,1,19,19";
+		HashMap<String, Integer> hm = new HashMap<String, Integer>();
+		int length = line.length();
+		for (int i = 0; i < length; i++) {
+			int count = 0;
+			if (hm.containsValue(line[i])) {
+				count = hm.get(line[i]);
+				count += 1;
+			}
+			hm.put(line[i], count);
+		}
+		System.out.println(hm);
+	}
+}

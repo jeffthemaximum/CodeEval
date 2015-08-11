@@ -1,0 +1,27 @@
+import java.util.HashMap;
+
+public class the_major_element {
+	public static void main (String[] args)
+	{
+		String line = "4,79,89,98,48,42,39,79,55,70,21,39,98,16,96,2,10,24,14,47,0,50,95,20,95,48,50,12,42";
+		String[] line_array = line.split(",");
+		float length = line_array.length;
+		HashMap<String, Float> hm = new HashMap<String, Float>();
+		boolean flag = false;
+		for (String num:line_array) {
+			float count = 1;
+			if (hm.containsKey(num)) {
+				count = hm.get(num);
+				count += 1;
+			}
+			hm.put(num, count);
+			if ((count / length) >= 0.5) {
+				System.out.println(num);
+				flag = true;
+			}
+		}
+		if (flag == false) {
+			System.out.println("None");
+		}
+	}
+}
