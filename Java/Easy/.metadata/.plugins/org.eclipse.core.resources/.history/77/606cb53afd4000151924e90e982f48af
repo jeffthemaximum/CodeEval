@@ -1,0 +1,9 @@
+package hex_to_decimal;
+import java.util.HashMap;
+
+public class hex_to_decimal {
+	public static void main(String[] args) {
+		HashMap<String, Integer> hm = new HashMap<String, Integer>();
+		
+	}
+}
