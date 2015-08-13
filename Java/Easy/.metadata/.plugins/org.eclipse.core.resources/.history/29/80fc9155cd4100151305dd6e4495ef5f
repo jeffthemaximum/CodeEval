@@ -1,0 +1,18 @@
+package set_intersection;
+
+public class set_intersection {
+	public static void main (String[] args)
+	{	
+		String line = "1,2,3,4;4,5,6";
+		String[] lines = line.split(";");
+		String[] first_new_string_array = lines[0].split(",");
+		String[] second_new_string_array = lines[1].split(",");
+		for (int i = 0; i < first_new_string_array.length; i++) {
+			for (int j = 0; j < second_new_string_array.length; j++) {
+				if (first_new_string_array[i].equals(second_new_string_array[j])){
+					System.out.println(first_new_string_array[i]);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+package set_intersection;
+
+public class set_intersection {
+	public static void main (String[] args)
+	{	
+		String line = "1,2,3,4;4,5,6";
+		String[] lines = line.split(";");
+		System.out.println(lines[0]);
+		
+	}
+}
