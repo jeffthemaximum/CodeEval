@@ -1,0 +1,21 @@
+package clean_up_words;
+
+
+public class clean_up_words {
+	public static void main(String[] args) {
+		String line = "(--9Hello----World...--)";
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < line.length(); i++){
+			char c = line.charAt(i);
+			if (Character.isLetter(c)) {
+				sb.append(c);
+			else {
+				sb.append(" ");
+			}
+		}
+		System.out.println(sb);
+	}
+		public static String remove_duplicate_whitespace(String extra_whitespace) {
+			return extra_whitespace.replaceAll("\\s+", " ");
+		}
+}

@@ -1,0 +1,10 @@
+package clean_up_words;
+
+public class clean_up_words {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
