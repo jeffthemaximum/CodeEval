@@ -1,0 +1,25 @@
+package one_two;
+
+import java.util.Arrays;
+
+// my solution:
+// sort both strings
+// compare and see if equal
+// ?? more optimal sorting solutions ??
+public class one_two {
+	public static void main(String[] args) {
+		String first_string = "edcba";
+		String second_string = "abcde";
+		
+		String sorted_first_string = sort_string(first_string);
+		System.out.println(sorted_first_string);
+		String sorted_second_string = sort_string(second_string);
+		System.out.println(sorted_second_string);
+	}
+	
+	public static String sort_string(String unsorted_string) {
+		char[] chars = unsorted_string.toCharArray();
+		Arrays.sort(chars);
+		return new String(chars);
+	}
+}

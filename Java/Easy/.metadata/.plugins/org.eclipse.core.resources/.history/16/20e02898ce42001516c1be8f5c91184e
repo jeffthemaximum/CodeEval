@@ -1,0 +1,54 @@
+package one_two;
+
+import java.util.Arrays;
+
+// my solution:
+// sort both strings
+// compare and see if equal
+// ?? more optimal sorting solutions ??
+public class one_two {
+	public static void main(String[] args) {
+		String first_string = "edcba";
+		String second_string = "abcde";
+		
+		// check my solution
+		String sorted_first_string = sort_string(first_string);
+		String sorted_second_string = sort_string(second_string);
+		System.out.println(check_equality(sorted_first_string, sorted_second_string));
+		permutations(first_string, second_string);
+	}
+	
+	// my solution:
+	// sort both strings
+	// compare and see if equal
+	// ?? more optimal sorting solutions ??
+	public static String sort_string(String unsorted_string) {
+		char[] chars = unsorted_string.toCharArray();
+		Arrays.sort(chars);
+		return new String(chars);
+	}
+	public static boolean check_equality(String string_one, String string_two){
+		if (string_one.equals(string_two)){
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	// book's fancy solution
+	// first book solution involved a similar sort/compare algorithm to me...
+	// fancy solution	
+	public static boolean permutations (String s, String t) {
+		if (s.length() != t.length()) {
+			return false;
+		}
+		int[] letters = new int[256];
+		char[] s_array = s.toCharArray();
+		for (char c:s_array) {
+			letters[c]++;
+		}
+		System.out.println(s_array);
+		return true;
+	}
+}
